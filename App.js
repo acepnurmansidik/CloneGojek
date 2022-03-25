@@ -15,7 +15,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollConatainer}>
         <View style={styles.containerSeacrhBar}>
-          <View style={{position: 'relative'}}>
+          <View style={{position: 'relative', flex: 1}}>
             <TextInput
               placeholder="What do you eat?"
               style={styles.searchBar}
@@ -23,6 +23,12 @@ export default function App() {
             <Image
               style={{position: 'absolute', top: 8, left: 8}}
               source={require('./icons/search.png')}
+            />
+          </View>
+          <View style={{width: 35, height: 41}}>
+            <Image
+              style={{position: 'absolute', top: 8, left: 8}}
+              source={require('./icons/promo.png')}
             />
           </View>
         </View>
@@ -85,7 +91,7 @@ const styles = StyleSheet.create({
   },
   scrollConatainer: {
     flex: 1,
-    backgroundColor: 'pink',
+    backgroundColor: '#FFF',
     marginHorizontal: 17,
   },
   navContainer: {
@@ -125,9 +131,12 @@ const styles = StyleSheet.create({
     paddingLeft: 40,
     paddingRight: 15,
     backgroundColor: 'white',
+    marginRight: 18,
   },
   containerSeacrhBar: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    backgroundColor: 'white',
+    paddingTop: 15,
   },
 });
