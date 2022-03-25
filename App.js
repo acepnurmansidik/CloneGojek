@@ -33,7 +33,7 @@ export default function App() {
             />
           </View>
         </View>
-        {/* Menu navigation */}
+        {/* Gopay navigation */}
         <View style={{marginTop: 18, borderRadius: 4, overflow: 'hidden'}}>
           <View style={[styles.containerRow, menuSection.menuNavSection]}>
             <Image source={require('./icons/gopay.png')} />
@@ -70,6 +70,149 @@ export default function App() {
                 <Image source={require('./icons/more.png')} />
               </View>
               <Text style={styles.txtGlobalStyle}>More</Text>
+            </View>
+          </View>
+        </View>
+        {/* Main Features */}
+        <View style={{marginTop: 18}}>
+          <View style={[styles.containerRow, mainSection.mainContainer]}>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-ride.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                GO-RIDE
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-car.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                GO-CAR
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-bluebird.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                GO-BLUEBIRD
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-send.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                GO-SEND
+              </Text>
+            </View>
+          </View>
+          <View style={[styles.containerRow, mainSection.mainContainer]}>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-deals.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                GO-DEALS
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-pulsa.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                GO-PULSA
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-food.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                GO-FOOD
+              </Text>
+            </View>
+            <View style={{alignItems: 'center'}}>
+              <View style={mainSection.contImgSection}>
+                <Image
+                  style={{width: 58, height: 58}}
+                  source={require('./icons/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                MORE
+              </Text>
             </View>
           </View>
         </View>
@@ -182,6 +325,25 @@ const menuSection = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 14,
     backgroundColor: '#2F65BD',
+  },
+});
+
+const mainSection = StyleSheet.create({
+  mainContainer: {
+    width: '100%',
+    marginBottom: 18,
+  },
+  contImgSection: {
+    width: 58,
+    height: 58,
+    borderWidth: 1,
+    borderColor: '#EFEFEF',
+    borderRadius: 18,
+    overflow: 'hidden',
+    backgroundColor: '#002',
+  },
+  mainItem: {
+    alignItems: 'space-between',
   },
 });
 
