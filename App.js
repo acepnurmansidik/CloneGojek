@@ -7,6 +7,7 @@ import {
   View,
   Image,
   TextInput,
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 
@@ -23,20 +24,20 @@ export default function App() {
             />
             <Image
               style={{position: 'absolute', top: 8, left: 8}}
-              source={require('./icons/search.png')}
+              source={require('./src/icons/search.png')}
             />
           </View>
           <View style={{width: 35, height: 41}}>
             <Image
               style={{position: 'absolute', top: 8, left: 8}}
-              source={require('./icons/promo.png')}
+              source={require('./src/icons/promo.png')}
             />
           </View>
         </View>
         {/* Gopay navigation */}
         <View style={{marginTop: 18, borderRadius: 4, overflow: 'hidden'}}>
           <View style={[styles.containerRow, menuSection.menuNavSection]}>
-            <Image source={require('./icons/gopay.png')} />
+            <Image source={require('./src/icons/gopay.png')} />
             <Text style={{color: '#FFF', fontWeight: 'bold', fontSize: 17}}>
               Rp. 50.000.000
             </Text>
@@ -49,25 +50,25 @@ export default function App() {
             ]}>
             <View style={navigation.itemNav}>
               <View>
-                <Image source={require('./icons/pay.png')} />
+                <Image source={require('./src/icons/pay.png')} />
               </View>
               <Text style={styles.txtGlobalStyle}>Pay</Text>
             </View>
             <View style={navigation.itemNav}>
               <View>
-                <Image source={require('./icons/nearby.png')} />
+                <Image source={require('./src/icons/nearby.png')} />
               </View>
               <Text style={styles.txtGlobalStyle}>Nearby</Text>
             </View>
             <View style={navigation.itemNav}>
               <View>
-                <Image source={require('./icons/topup.png')} />
+                <Image source={require('./src/icons/topup.png')} />
               </View>
               <Text style={styles.txtGlobalStyle}>TopUp</Text>
             </View>
             <View style={navigation.itemNav}>
               <View>
-                <Image source={require('./icons/more.png')} />
+                <Image source={require('./src/icons/more.png')} />
               </View>
               <Text style={styles.txtGlobalStyle}>More</Text>
             </View>
@@ -80,7 +81,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-ride.png')}
+                  source={require('./src/icons/go-ride.png')}
                 />
               </View>
               <Text
@@ -97,7 +98,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-car.png')}
+                  source={require('./src/icons/go-car.png')}
                 />
               </View>
               <Text
@@ -114,7 +115,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-bluebird.png')}
+                  source={require('./src/icons/go-bluebird.png')}
                 />
               </View>
               <Text
@@ -131,7 +132,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-send.png')}
+                  source={require('./src/icons/go-send.png')}
                 />
               </View>
               <Text
@@ -150,7 +151,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-deals.png')}
+                  source={require('./src/icons/go-deals.png')}
                 />
               </View>
               <Text
@@ -167,7 +168,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-pulsa.png')}
+                  source={require('./src/icons/go-pulsa.png')}
                 />
               </View>
               <Text
@@ -184,7 +185,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-food.png')}
+                  source={require('./src/icons/go-food.png')}
                 />
               </View>
               <Text
@@ -201,7 +202,7 @@ export default function App() {
               <View style={mainSection.contImgSection}>
                 <Image
                   style={{width: 58, height: 58}}
-                  source={require('./icons/go-more.png')}
+                  source={require('./src/icons/go-more.png')}
                 />
               </View>
               <Text
@@ -216,13 +217,68 @@ export default function App() {
             </View>
           </View>
         </View>
+        <View style={{marginTop: 20, backgroundColor: '#F2F2F4', height: 17}} />
+        {/* News Features */}
+        <View style={{marginVertical: 16, marginHorizontal: 16}}>
+          <View style={{position: 'relative'}}>
+            <Image
+              style={{width: '100%', height: 200, borderRadius: 5}}
+              source={require('./src/img/sepak-bola.jpg')}
+            />
+            <View
+              style={{
+                backgroundColor: 'black',
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                opacity: 0.2,
+                borderRadius: 5,
+              }}
+            />
+            <View
+              style={{
+                width: 55,
+                height: 15,
+                position: 'absolute',
+                marginTop: 5,
+                marginLeft: 10,
+              }}>
+              <Image
+                style={{
+                  width: undefined,
+                  height: undefined,
+                  resizeMode: 'contain',
+                  flex: 1,
+                }}
+                source={require('./src/icons/white.png')}
+              />
+            </View>
+          </View>
+          <View
+            style={{
+              paddingVertical: 16,
+              borderBottomColor: '#E8E9ED',
+              borderBottomWidth: 1,
+              marginBottom: 5,
+            }}>
+            <Text style={{fontSize: 16, fontWeight: 'bold', color: '#1C1C1C'}}>
+              Go News
+            </Text>
+            <Text style={{fontSize: 14, color: '#7A7A7A'}}>
+              Dimas Drajad Selamatkan Penalti, Timnas U-23 Kalahkan Brunei
+            </Text>
+            <TouchableOpacity style={styles.btnRead}>
+              <Text style={styles.txtBtn}>READ</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </ScrollView>
       <View style={styles.navContainer}>
         <View style={navigation.itemNav}>
           <View style={{backgroundColor: 'white'}}>
             <Image
               style={navigation.iconImg}
-              source={require('./icons/home-active.png')}
+              source={require('./src/icons/home-active.png')}
             />
           </View>
           <Text style={[styles.textNav, navigation.active]}>Home</Text>
@@ -231,7 +287,7 @@ export default function App() {
           <View style={{backgroundColor: 'white'}}>
             <Image
               style={navigation.iconImg}
-              source={require('./icons/order.png')}
+              source={require('./src/icons/order.png')}
             />
           </View>
           <Text style={styles.textNav}> Order</Text>
@@ -240,7 +296,7 @@ export default function App() {
           <View style={{backgroundColor: 'white'}}>
             <Image
               style={navigation.iconImg}
-              source={require('./icons/help.png')}
+              source={require('./src/icons/help.png')}
             />
           </View>
           <Text style={styles.textNav}>Help</Text>
@@ -249,7 +305,7 @@ export default function App() {
           <View style={{backgroundColor: 'white'}}>
             <Image
               style={navigation.iconImg}
-              source={require('./icons/inbox.png')}
+              source={require('./src/icons/inbox.png')}
             />
           </View>
           <Text style={styles.textNav}> Inbox</Text>
@@ -258,7 +314,7 @@ export default function App() {
           <View style={{backgroundColor: 'white'}}>
             <Image
               style={navigation.iconImg}
-              source={require('./icons/account.png')}
+              source={require('./src/icons/account.png')}
             />
           </View>
           <Text style={styles.textNav}>Account</Text>
@@ -298,6 +354,21 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 13,
     marginTop: 15,
+  },
+  btnRead: {
+    backgroundColor: '#61A756',
+    borderRadius: 4,
+    marginTop: 11,
+    paddingVertical: 11,
+    paddingHorizontal: 12,
+    alignSelf: 'flex-end',
+  },
+  txtBtn: {
+    color: 'white',
+    fontWeight: 'bold',
+    letterSpacing: 1,
+    textAlign: 'center',
+    fontSize: 13,
   },
 });
 
